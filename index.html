@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfólio | Pedro Mantovani</title>
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/index.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===== CABEÇALHO / NAVEGAÇÃO ===== -->
+  <header class="cabecalho">
+    <nav class="navegacao" aria-label="Navegação principal">
+      <a href="index.html" class="logo">PM<span class="logo-ponto">.</span></a>
+      <ul class="menu-lista">
+        <li><a href="index.html" class="menu-link ativo">Início</a></li>
+        <li><a href="projetos.html" class="menu-link">Projetos</a></li>
+        <li><a href="contato.html" class="menu-link">Contato</a></li>
+      </ul>
+      <button class="menu-hamburguer" id="btnMenu" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===== SEÇÃO HERO ===== -->
+    <section class="hero" aria-labelledby="titulo-hero">
+      <div class="hero-conteudo">
+        <p class="hero-saudacao">Seja bem-vindo!</p>
+        <h1 id="titulo-hero" class="hero-titulo">
+          Eu sou <span class="hero-nome" id="nomeAnimado"></span><span class="cursor" aria-hidden="true">|</span>
+        </h1>
+        <p class="hero-descricao">
+          Estudante de <strong>Engenharia de Software</strong> pela Universidade UniFil, apaixonado por segurança da informação.
+          <strong>Trabalho em equipe</strong> e <strong>Liderança</strong> me definem.
+        </p>
+        <div class="hero-acoes">
+          <a href="projetos.html" class="btn btn-primario">Ver projetos</a>
+          <a href="contato.html" class="btn btn-secundario">Fale comigo</a>
+        </div>
+        <div class="hero-redes" aria-label="Redes sociais">
+          <a href="https://www.linkedin.com/in/pedro-mantovani01" target="_blank" rel="noopener" class="rede-link" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M20.447 20.452H17.21v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.989V9h3.101v1.561h.042c.432-.816 1.489-1.676 3.065-1.676 3.278 0 3.881 2.156 3.881 4.961v6.606zM5.337 7.433a1.8 1.8 0 1 1 0-3.6 1.8 1.8 0 0 1 0 3.6zm1.556 13.019H3.78V9h3.113v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="https://github.com/mantovani18/" target="_blank" rel="noopener" class="rede-link" aria-label="GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          </a>
+          <a href="mailto:phmantovani046@gmail.com" class="rede-link" aria-label="E-mail">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          </a>
+        </div>
+      </div>
+      <figure class="hero-imagem-wrapper" aria-label="Foto de perfil">
+        <img
+          src="img/imgPedro.jpeg"
+          alt="Foto de Pedro Mantovani"
+          class="hero-imagem"
+          onerror="this.src='https://placehold.co/420x420/1a1a2e/E2FF5D?text=Pedro+M'"
+        />
+      </figure>
+    </section>
+
+    <!-- ===== SEÇÃO SOBRE ===== -->
+    <section class="sobre" aria-labelledby="titulo-sobre">
+      <div class="sobre-conteudo">
+        <header class="secao-cabecalho">
+          <span class="secao-label">Sobre mim</span>
+          <h2 id="titulo-sobre" class="secao-titulo">Quem sou eu?</h2>
+        </header>
+        <p class="sobre-texto">
+          Sou um estudante de <strong>Engenharia de Software</strong> pela
+          Universidade UniFil, com foco em segurança da informação.
+          Gosto de como a proteção de dados pode ser implementada de forma eficaz.
+        </p>
+        <p class="sobre-texto">
+          Quando não estou codando, você me encontra explorando design, jogando videogame
+          ou aprendendo algo novo. Sempre em busca de evoluir. 🚀
+        </p>
+      </div>
+
+      <!-- HABILIDADES -->
+      <div class="habilidades" aria-label="Minhas habilidades">
+        <h3 class="habilidades-titulo">Tecnologias</h3>
+        <ul class="habilidades-lista">
+          <li class="habilidade-item">
+            <span class="habilidade-nome">HTML</span>
+            <div class="barra-progresso" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+              <div class="barra-preenchimento" data-progresso="90" style="width: 90%"></div>
+            </div>
+          </li>
+          <li class="habilidade-item">
+            <span class="habilidade-nome">CSS</span>
+            <div class="barra-progresso" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+              <div class="barra-preenchimento" data-progresso="80" style="width: 80%"></div>
+            </div>
+          </li>
+          <li class="habilidade-item">
+            <span class="habilidade-nome">JavaScript</span>
+            <div class="barra-progresso" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+              <div class="barra-preenchimento" data-progresso="70" style="width: 70%"></div>
+            </div>
+          </li>
+          <li class="habilidade-item">
+            <span class="habilidade-nome">Python</span>
+            <div class="barra-progresso" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+              <div class="barra-preenchimento" data-progresso="60" style="width: 60%"></div>
+            </div>
+          </li>
+          <li class="habilidade-item">
+            <span class="habilidade-nome">Git & GitHub</span>
+            <div class="barra-progresso" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+              <div class="barra-preenchimento" data-progresso="75" style="width: 75%"></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== SEÇÃO NÚMEROS / DESTAQUE ===== -->
+    <section class="numeros" aria-label="Números em destaque">
+      <article class="numero-card">
+        <strong class="numero-valor" data-alvo="12">0</strong>
+        <p class="numero-rotulo">Projetos concluídos</p>
+      </article>
+      <article class="numero-card">
+        <strong class="numero-valor" data-alvo="5">0</strong>
+        <p class="numero-rotulo">Tecnologias dominadas</p>
+      </article>
+      <article class="numero-card">
+        <strong class="numero-valor" data-alvo="3">0</strong>
+        <p class="numero-rotulo">Anos estudando</p>
+      </article>
+    </section>
+
+  </main>
+
+  <!-- ===== RODAPÉ ===== -->
+  <footer class="rodape">
+    <p class="rodape-texto">
+      Desenvolvido por <strong>Pedro Henrique Mantovani</strong> &mdash; 2026
+    </p>
+  </footer>
+
+  <script src="js/global.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>

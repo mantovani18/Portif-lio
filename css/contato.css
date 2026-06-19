@@ -1,0 +1,213 @@
+
+.contato-layout {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem 6rem;
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.contato-info {
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio-lg);
+  padding: 2rem;
+  position: sticky;
+  top: 6rem;
+}
+
+.contato-info-titulo {
+  font-family: var(--fonte-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 1.75rem;
+  color: var(--cor-texto);
+}
+
+/* ── Canais ── */
+.contato-canais {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.canal-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.canal-icone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  background: rgba(226, 255, 93, 0.1);
+  border: 1px solid rgba(226, 255, 93, 0.2);
+  border-radius: var(--raio-md);
+  color: var(--cor-acento);
+}
+
+.canal-detalhes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.canal-nome {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--cor-texto-suave);
+}
+
+.canal-valor {
+  font-size: 0.9rem;
+  color: var(--cor-texto);
+  transition: color var(--transicao);
+  word-break: break-all;
+}
+
+.canal-valor:hover {
+  color: var(--cor-acento);
+}
+
+/* ── Disponibilidade ── */
+.disponibilidade {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.75rem 1rem;
+  background: rgba(107, 255, 184, 0.07);
+  border: 1px solid rgba(107, 255, 184, 0.2);
+  border-radius: var(--raio-md);
+  font-size: 0.85rem;
+  color: var(--cor-sucesso);
+}
+
+.disponibilidade-dot {
+  width: 8px;
+  height: 8px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--cor-sucesso);
+  animation: pulsarPonto 1.4s ease-in-out infinite;
+}
+
+
+.formulario-wrapper {
+  padding-top: 0.5rem;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* ── Grupo de campo ── */
+.campo-grupo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.campo-rotulo {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--cor-texto);
+}
+
+.campo-rotulo span {
+  color: var(--cor-acento);
+}
+
+/* ── Inputs e textarea ── */
+.campo-entrada {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio-md);
+  color: var(--cor-texto);
+  font-family: var(--fonte-corpo);
+  font-size: 0.95rem;
+  transition: border-color var(--transicao), box-shadow var(--transicao);
+  outline: none;
+}
+
+.campo-entrada::placeholder {
+  color: var(--cor-texto-suave);
+  opacity: 0.7;
+}
+
+.campo-entrada:focus {
+  border-color: var(--cor-acento);
+  box-shadow: 0 0 0 3px rgba(226, 255, 93, 0.12);
+}
+
+.campo-entrada.invalido {
+  border-color: var(--cor-erro);
+  box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.12);
+}
+
+.campo-textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+/* ── Mensagem de erro ── */
+.campo-erro {
+  font-size: 0.8rem;
+  color: var(--cor-erro);
+  min-height: 1.2em;
+}
+
+/* ── Botão de envio ── */
+.btn-enviar {
+  width: 100%;
+  justify-content: center;
+  padding: 1rem;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+/* ── Feedback após envio ── */
+.formulario-feedback {
+  padding: 1rem 1.25rem;
+  border-radius: var(--raio-md);
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.formulario-feedback.sucesso {
+  background: rgba(107, 255, 184, 0.1);
+  border: 1px solid rgba(107, 255, 184, 0.25);
+  color: var(--cor-sucesso);
+}
+
+.formulario-feedback.erro {
+  background: rgba(255, 107, 107, 0.1);
+  border: 1px solid rgba(255, 107, 107, 0.25);
+  color: var(--cor-erro);
+}
+
+
+@media (max-width: 800px) {
+  .contato-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0 1rem 4rem;
+  }
+
+  .contato-info {
+    position: static;
+  }
+}

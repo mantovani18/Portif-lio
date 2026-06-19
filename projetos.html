@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projetos | Pedro Mantovani</title>
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/projetos.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+ 
+  <header class="cabecalho">
+    <nav class="navegacao" aria-label="Navegação principal">
+      <a href="index.html" class="logo">PM<span class="logo-ponto">.</span></a>
+      <ul class="menu-lista">
+        <li><a href="index.html" class="menu-link">Início</a></li>
+        <li><a href="projetos.html" class="menu-link ativo">Projetos</a></li>
+        <li><a href="contato.html" class="menu-link">Contato</a></li>
+      </ul>
+      <button class="menu-hamburguer" id="btnMenu" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+
+   
+    <section class="pagina-hero" aria-labelledby="titulo-projetos">
+      <div class="pagina-hero-conteudo">
+        <span class="secao-label">O que eu construí</span>
+        <h1 id="titulo-projetos" class="pagina-titulo">Meus Projetos</h1>
+        <p class="pagina-descricao">
+          Uma seleção dos projetos que desenvolvi durante minha trajetória.
+          Cada um representa um aprendizado e um desafio superado.
+        </p>
+      </div>
+    </section>
+
+    <!-- Filtros dos proejetos -->
+    <section class="filtros" aria-label="Filtrar projetos por categoria">
+      <div class="filtros-lista" role="group" aria-label="Categorias">
+        <button class="filtro-btn ativo" data-filtro="todos">Todos</button>
+        <button class="filtro-btn" data-filtro="web">Web</button>
+        <button class="filtro-btn" data-filtro="app">App</button>
+        <button class="filtro-btn" data-filtro="dados">Dados</button>
+      </div>
+    </section>
+
+    <!-- Meus Projetos  -->
+    <section class="projetos-grade" aria-label="Lista de projetos">
+
+      <!-- PROJETO 1 -->
+      <article class="projeto-card" data-categoria="web">
+        <figure class="projeto-figura">
+          <img
+            src="img/imgLondrinense.png"
+            alt="Captura de tela do Projeto Londrinense Tech"
+            class="projeto-imagem"
+            onerror="this.src='https://placehold.co/600x360/1a1a2e/E2FF5D?text=Projeto+01'"
+          />
+          <figcaption class="projeto-overlay">
+            <a href="https://sites.google.com/edu.unifil.br/pedrohenriquemantovani/p%C3%A1gina-inicial" class="btn btn-primario btn-pequeno" target="_blank" rel="noopener">Ver demo</a>
+            <a href="https://github.com/seu-usuario/projeto-01" class="btn btn-ghost btn-pequeno" target="_blank" rel="noopener">GitHub</a>
+          </figcaption>
+        </figure>
+        <div class="projeto-info">
+          <header>
+            <span class="projeto-categoria">Web</span>
+            <h2 class="projeto-titulo">Projeto Londrinense Tech</h2>
+          </header>
+          <p class="projeto-descricao">
+            Nesse projeto, participei de uma iniciativa da universidade, para ensinar crianças e adolescentes a programar.Aprendi muito, e trabalhar com pessoas nos ajuda a entender os dois lados, tanto de quem ensina, quanto de quem aprende.
+          </p>
+          <ul class="projeto-tags" aria-label="Tecnologias utilizadas">
+            <li class="tag">HTML</li>
+            <li class="tag">CSS</li>
+            <li class="tag">JavaScript</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- PROJETO 2 -->
+      <article class="projeto-card" data-categoria="app">
+        <figure class="projeto-figura">
+          <img
+            src="img/imgSmart.png"
+            alt="Captura de tela do Hackathon SmartCitys"
+            class="projeto-imagem"
+           
+          />
+          <figcaption class="projeto-overlay">
+            <a href="#" class="btn btn-primario btn-pequeno" target="_blank" rel="noopener">Ver demo</a>
+            <a href="https://github.com/seu-usuario/projeto-02" class="btn btn-ghost btn-pequeno" target="_blank" rel="noopener">GitHub</a>
+          </figcaption>
+        </figure>
+        <div class="projeto-info">
+          <header>
+            <span class="projeto-categoria">App</span>
+            <h2 class="projeto-titulo">Hackathon SmartCitys</h2>
+          </header>
+          <p class="projeto-descricao">
+            Desenvolvemos um projeto com foco em captura de dados de fluxo de pessoas, gerando a melhor rota para turismo e passeios diversos, monitorados por câmeras, melhorando a segurança. Ficamos em 2° lugar no hackathon.
+          </p>
+          <ul class="projeto-tags" aria-label="Tecnologias utilizadas">
+            <li class="tag">Python</li>
+            <li class="tag">Flask</li>
+            <li class="tag">PostgreSQL</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- PROJETO 3 -->
+      <article class="projeto-card" data-categoria="dados">
+        <figure class="projeto-figura">
+          <img
+            src="img/imgGreen.jpeg"
+            alt="Captura de tela do Hackathon GreenTech"
+            class="projeto-imagem"
+            onerror="this.src='https://placehold.co/600x360/1a1a2e/E2FF5D?text=Projeto+03'"
+          />
+          <figcaption class="projeto-overlay">
+            <a href="https://bytebits.com.br/energy-tracker/" class="btn btn-primario btn-pequeno" target="_blank" rel="noopener">Ver demo</a>
+            <a href="https://github.com/seu-usuario/projeto-03" class="btn btn-ghost btn-pequeno" target="_blank" rel="noopener">GitHub</a>
+          </figcaption>
+        </figure>
+        <div class="projeto-info">
+          <header>
+            <span class="projeto-categoria">Dados</span>
+            <h2 class="projeto-titulo">Hackathon GreenTech</h2>
+          </header>
+          <p class="projeto-descricao">
+            Desenvolvemos um hardware capaz de medir o quanto de energia uma máquina gasta, com base em gráficos e uma IA que analisa os dados. Conseguimos reduzir o consumo de energia em 30% em uma empresa. Ficamos em 3° lugar no hackathon.
+          </p>
+          <ul class="projeto-tags" aria-label="Tecnologias utilizadas">
+            <li class="tag">Python</li>
+            <li class="tag">HTML</li>
+            <li class="tag">PostgreSQL</li>
+            <li class="tag">PostMan</li>
+            <li class="tag">Esp32</li>
+
+          </ul>
+        </div>
+      </article>
+
+      
+
+    
+    <p class="sem-resultados" id="semResultados" aria-live="polite" hidden>
+      Nenhum projeto encontrado nessa categoria.
+    </p>
+
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="rodape">
+    <p class="rodape-texto">
+      Desenvolvido por <strong>Pedro Henrique Mantovani</strong> &mdash; 2026
+    </p>
+  </footer>
+
+  <script src="js/global.js"></script>
+  <script src="js/projetos.js"></script>
+</body>
+</html>

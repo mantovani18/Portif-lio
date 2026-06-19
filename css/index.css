@@ -1,0 +1,264 @@
+
+.hero {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 8rem 2rem 4rem;
+}
+
+.hero-conteudo {
+  animation: fadeEntrada 0.7s ease both;
+}
+
+.hero-saudacao {
+  font-size: 1rem;
+  color: var(--cor-texto-suave);
+  margin-bottom: 0.5rem;
+  animation: fadeEntrada 0.7s ease 0.1s both;
+}
+
+.hero-titulo {
+  font-family: var(--fonte-display);
+  font-size: clamp(2.5rem, 5vw, 3.8rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin-bottom: 1.25rem;
+  animation: fadeEntrada 0.7s ease 0.2s both;
+}
+
+.hero-nome {
+  color: var(--cor-acento);
+}
+
+.cursor {
+  display: inline-block;
+  color: var(--cor-acento);
+  animation: pulsarPonto 0.8s step-end infinite;
+  font-weight: 300;
+}
+
+.hero-descricao {
+  font-size: 1.05rem;
+  color: var(--cor-texto-suave);
+  max-width: 480px;
+  margin-bottom: 2rem;
+  animation: fadeEntrada 0.7s ease 0.3s both;
+}
+
+.hero-descricao strong {
+  color: var(--cor-texto);
+}
+
+.hero-acoes {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+  animation: fadeEntrada 0.7s ease 0.4s both;
+}
+
+/* Ícones de redes sociais */
+.hero-redes {
+  display: flex;
+  gap: 0.75rem;
+  animation: fadeEntrada 0.7s ease 0.5s both;
+}
+
+.rede-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--raio-md);
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  color: var(--cor-texto-suave);
+  transition: color var(--transicao), border-color var(--transicao), transform var(--transicao), background var(--transicao);
+}
+
+.rede-link:hover {
+  color: var(--cor-acento);
+  border-color: var(--cor-acento);
+  background: rgba(226, 255, 93, 0.08);
+  transform: translateY(-3px);
+}
+
+/* Imagem hero */
+.hero-imagem-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeEntrada 0.7s ease 0.3s both;
+}
+
+.hero-imagem {
+  width: clamp(280px, 40vw, 420px);
+  height: clamp(280px, 40vw, 420px);
+  object-fit: cover;
+  border-radius: var(--raio-lg);
+  position: relative;
+  z-index: 1;
+  box-shadow: var(--sombra-card);
+}
+
+
+.sobre {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 6rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: start;
+  border-top: 1px solid var(--cor-borda);
+}
+
+.secao-cabecalho {
+  margin-bottom: 1.5rem;
+}
+
+.sobre-texto {
+  color: var(--cor-texto-suave);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  line-height: 1.75;
+}
+
+.sobre-texto strong {
+  color: var(--cor-texto);
+}
+
+/* Habilidades */
+.habilidades-titulo {
+  font-family: var(--fonte-display);
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--cor-texto-suave);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.habilidades-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.habilidade-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.habilidade-nome {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--cor-texto);
+}
+
+.barra-progresso {
+  height: 6px;
+  background: var(--cor-borda);
+  border-radius: var(--raio-pill);
+  overflow: hidden;
+}
+
+.barra-preenchimento {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, var(--cor-acento), #a8d020);
+  border-radius: var(--raio-pill);
+  transition: width 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+
+.numeros {
+  background: var(--cor-superficie);
+  border-top: 1px solid var(--cor-borda);
+  border-bottom: 1px solid var(--cor-borda);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.numero-card {
+  padding: 3.5rem 2rem;
+  text-align: center;
+  border-right: 1px solid var(--cor-borda);
+  transition: background var(--transicao);
+}
+
+.numero-card:last-child {
+  border-right: none;
+}
+
+.numero-card:hover {
+  background: rgba(226, 255, 93, 0.04);
+}
+
+.numero-valor {
+  display: block;
+  font-family: var(--fonte-display);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  color: var(--cor-acento);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.numero-rotulo {
+  font-size: 0.875rem;
+  color: var(--cor-texto-suave);
+}
+
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding-top: 7rem;
+  }
+
+  .hero-conteudo {
+    order: 2;
+  }
+
+  .hero-imagem-wrapper {
+    order: 1;
+  }
+
+  .hero-acoes,
+  .hero-redes {
+    justify-content: center;
+  }
+
+  .hero-descricao {
+    margin: 0 auto 2rem;
+  }
+
+  .sobre {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .numeros {
+    grid-template-columns: 1fr;
+  }
+
+  .numero-card {
+    border-right: none;
+    border-bottom: 1px solid var(--cor-borda);
+    padding: 2.5rem 2rem;
+  }
+
+  .numero-card:last-child {
+    border-bottom: none;
+  }
+}
