@@ -79,7 +79,7 @@ button {
   border-radius: var(--raio-sm);
 }
 
-/* ── Redução de movimento ── */
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
@@ -154,7 +154,7 @@ button {
   color: var(--cor-acento);
 }
 
-/* Hamburguer (mobile) */
+
 .menu-hamburguer {
   display: none;
   flex-direction: column;

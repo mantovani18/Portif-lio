@@ -3,11 +3,10 @@
 // add meu numero de whatsapp para contato
 const NUMERO_WHATSAPP = '5543996212570';
 
-/**
- * Exibe uma mensagem de erro em um campo específico.
+/** 
  
  * @param {HTMLElement} campo    - Input ou textarea inválido
- * @param {HTMLElement} spanErro - Elemento que exibe a mensagem
+ * @param {HTMLElement} spanErro - exibe a mensagem
  * @param {string}      mensagem - Texto do erro a exibir
  */
 function mostrarErro(campo, spanErro, mensagem) {
@@ -25,8 +24,6 @@ function limparErro(campo, spanErro) {
 }
 
 /**
- * Valida o formulário inteiro.
- * Retorna true se tudo estiver correto, false caso ele estiver errado.
  *
  * @returns {boolean}
  */
@@ -77,7 +74,6 @@ function validarFormulario() {
 }
 
 /**
- * mensagem ja formatada para enviar para o whatsapp
  *
  * @param {string} nome     - Nome de quem está entrando em contato
  * @param {string} email    - E-mail de quem está entrando em contato
@@ -106,11 +102,7 @@ function enviarParaWhatsApp(nome, email, assunto, mensagem) {
   window.open(urlWhatsApp, '_blank', 'noopener');
 }
 
-/**
- * Inicializa o formulário de contato:
- * - Validação em tempo real ao sair do campo (blur)
- * - Validação completa, feedback visual e redirecionamento ao WhatsApp
- */
+
 function inicializarFormulario() {
   const formulario        = document.getElementById('formularioContato');
   const btnEnviar          = document.getElementById('btnEnviar');
@@ -119,7 +111,7 @@ function inicializarFormulario() {
 
   if (!formulario) return;
 
-  // Validação ao sair de cada campo (feedback imediato)
+
   const campos = formulario.querySelectorAll('.campo-entrada');
   campos.forEach(function (campo) {
     campo.addEventListener('blur', function () {
@@ -142,7 +134,7 @@ function inicializarFormulario() {
 
   // Submissão do formulário
   formulario.addEventListener('submit', function (evento) {
-    evento.preventDefault(); // Impede recarregamento da página
+    evento.preventDefault(); 
 
     if (!validarFormulario()) return;
 
@@ -168,7 +160,7 @@ function inicializarFormulario() {
       btnEnviar.disabled  = false;
       btnEnviar.innerHTML = textoBtnOriginal;
 
-      // Oculta o feedback após alguns segundos
+      // Oculta o feedback após um tempo
       setTimeout(function () {
         feedback.hidden = true;
       }, 6000);
@@ -189,7 +181,7 @@ function inicializarBotaoFlutuante() {
 }
 
 /**
- * Contador de caracteres da mensagem.
+ * Contador de caracteres
  */
 function inicializarContadorMensagem() {
   const campoMensagem = document.getElementById('campoMensagem');
@@ -210,7 +202,7 @@ function inicializarContadorMensagem() {
   });
 }
 
-/* ── Inicializa tudo quando o DOM estiver pronto ── */
+
 document.addEventListener('DOMContentLoaded', function () {
   inicializarFormulario();
   inicializarBotaoFlutuante();

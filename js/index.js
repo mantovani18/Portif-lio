@@ -3,7 +3,7 @@ function inicializarTypewriter() {
   const elementoNome = document.getElementById('nomeAnimado');
   if (!elementoNome) return;
 
-  const textos = ['Pedro Mantovani', 'Dev Full Stack'];
+  const textos = ['Pedro Mantovani'];
   let indiceTexto    = 0;
   let indiceLetra    = 0;
   let estáApagando   = false;
@@ -49,12 +49,6 @@ function inicializarContadores() {
   const elementos = document.querySelectorAll('.numero-valor[data-alvo]');
   if (!elementos.length) return;
 
-  /**
-   * Anima um número de 0 até o valor-certo.
-   * @param {HTMLElement} elemento - Elemento que exibe o número
-   * @param {number} alvo          - Valor final
-   * @param {number} duracao       - Duração em ms
-   */
   function animarContador(elemento, alvo, duracao) {
     const inicio     = performance.now();
     const valorInicial = 0;
